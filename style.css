@@ -1,0 +1,108 @@
+:root {
+  /* Light mode */
+  --light-switch-shadow: #373d4e;
+  --light-switch-icon: "🌚";
+  --light-switch-text: "dark mode?";
+  --light-text: #222430;
+  --light-bg: #f7f7f7;
+  --light-theme: #d34a97;
+
+  /* Dark mode */
+  --dark-switch-shadow: #fce477;
+  --dark-switch-icon: "🌝";
+  --dark-switch-text: "light mode?";
+  --dark-text: #f7f7f7;
+  --dark-bg: #222430;
+  --dark-theme: #bd93f9;
+
+  /* Default mode */
+  --switch-shadow-color: var(--light-switch-shadow);
+  --switch-icon: var(--light-switch-icon);
+  --switch-text: var(--light-switch-text);
+  --text-color: var(--light-text);
+  --bg-color: var(--light-bg);
+  --theme-color: var(--light-theme);
+}
+
+/* Switched mode */
+.theme-switch:checked ~ #page {
+  --switch-shadow-color: var(--dark-switch-shadow);
+  --switch-icon: var(--dark-switch-icon);
+  --switch-text: var(--dark-switch-text);
+  --text-color: var(--dark-text);
+  --bg-color: var(--dark-bg);
+  --theme-color: var(--dark-theme);
+}
+
+/* Theme switcher */
+.theme-switch { /* Hides the checkbox */
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.switch-label {
+  cursor: pointer;
+  display: flex;
+}
+
+.switch-label::before {
+  content: var(--switch-icon);
+  font-size: 40px;
+  transition: text-shadow .2s;
+}
+
+.switch-label::after {
+  align-self: center;
+  content: var(--switch-text);
+  color: var(--switch-shadow-color);
+  font-size: 28px;
+  line-height: 40px;
+  opacity: 0;
+  padding-left: 15px;
+  transition: opacity .2s;
+}
+
+.theme-switch:focus ~ #page .switch-label::before,
+.switch-label:hover::before {
+  text-shadow: 0 0 15px var(--switch-shadow-color);
+}
+
+.theme-switch:focus ~ #page .switch-label::after,
+.switch-label:hover::after {
+  opacity: 1;
+}
+
+/* Styling */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#page {
+  background: var(--bg-color);
+  color: var(--text-color);
+  font: normal 125%/1.4 Georgia, 'Times New Roman', Times, serif;
+  min-height: 100%;
+  transition: color .2s, background-color .2s;
+}
+
+#content {
+  margin: auto;
+  max-width: 60ch;
+  padding: 2ch;
+}
+
+a {
+  color: var(--theme-color);
+}
+
+footer {
+  padding: 20px 0;
+  margin: 50px 0;
+  border-top: 1px solid var(--text-color);
+}

@@ -8,7 +8,7 @@ This is a website theme switcher made with CSS only. There are two different ver
 2. Using radio buttons for unlimited amount of themes
 
 ## Usage
-[**Check it out live**](https://alexandersandberg.github.io/color-extractor/) *or* download the files and open `index.html` in your preferred browser.
+[**Check it out live**](https://alexandersandberg.github.io/theme-switcher/) *or* download the files and open `index.html` in your preferred browser.
 
 ## A project by Alexander Sandberg
 Thanks for checking out my project! ❤️

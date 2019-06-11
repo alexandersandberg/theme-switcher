@@ -1,45 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSS Only Theme Switcher by Alexander Sandberg</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <input type="checkbox" class="theme-switch" id="theme-switch">
-  <div id="page">
-    <div id="content">
-      <header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Only Theme Switcher by Alexander Sandberg</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <input type="checkbox" class="theme-switch" id="theme-switch" />
+    <div id="page">
+      <div id="content">
+        <header>
           <label for="theme-switch" class="switch-label"></label>
-      </header>
-      <main>
-        <h1>CSS Only Theme Switcher</h1>
-        <p>This is a website theme switcher made using CSS only<i>*</i>. Click the moon above to try it out! You can also reach it by using your keyboard (<code>Tab</code> to focus, and <code>Space</code> to activate).</p>
-        <p>> <a href="unlimited.html">Unlimited themes-version</a></p>
-        <small>*The solution uses a tiny bit of optional JavaScript to store an item in localStorage, which allows the browser to remember which theme was selected when reloading the page.</small>
-        <!--<p>I wrote <a href="">an article on Medium</a> explaining the functionality behind this.</p>-->
-      </main>
-      <footer>
-        <small>A tiny project by <a href="https://github.com/alexandersandberg">Alexander Sandberg</a> 🐨 / <a href="https://github.com/alexandersandberg/theme-switcher">GitHub repo</a></small>
-      </footer>
+        </header>
+        <main>
+          <h1>CSS Only Theme Switcher</h1>
+          <p>
+            This is a website theme switcher made using CSS only<i>*</i>. Click
+            the moon above to try it out! You can also reach it by using your
+            keyboard (<code>Tab</code> to focus, and <code>Space</code> to
+            activate).
+          </p>
+          <p><a href="unlimited.html">Unlimited themes-version</a></p>
+          <small
+            >* The solution uses a tiny bit of optional JavaScript to store an
+            item in localStorage, which allows the browser to remember which
+            theme was selected when reloading the page.</small
+          >
+          <p>
+            I wrote
+            <a href="https://alexandersandberg.com/theme-switcher/"
+              >an article on my website</a
+            >
+            explaining the functionality behind this.
+          </p>
+        </main>
+        <footer>
+          <small
+            >A tiny project by
+            <a href="https://github.com/alexandersandberg"
+              >Alexander Sandberg</a
+            >
+            🐨 /
+            <a href="https://github.com/alexandersandberg/theme-switcher"
+              >GitHub repo</a
+            ></small
+          >
+        </footer>
+      </div>
     </div>
-  </div>
 
-  <script>
-  // This code is only used to remember theme selection between page loads
-  const themeSwitch = document.querySelector('.theme-switch');
-  themeSwitch.checked = localStorage.getItem('switchedTheme') === 'true';
+    <script>
+      // This code is only used to remember theme selection between page loads
+      const themeSwitch = document.querySelector('.theme-switch');
+      themeSwitch.checked = localStorage.getItem('switchedTheme') === 'true';
 
-  themeSwitch.addEventListener('change', function (e) {
-    if(e.currentTarget.checked === true) {
-      // Add item to localstorage
-      localStorage.setItem('switchedTheme', 'true');
-    } else {
-      // Remove item if theme is switched back to normal
-      localStorage.removeItem('switchedTheme');
-    }
-  });
-</script>
-</body>
+      themeSwitch.addEventListener('change', function(e) {
+        if (e.currentTarget.checked === true) {
+          // Add item to localstorage
+          localStorage.setItem('switchedTheme', 'true');
+        } else {
+          // Remove item if theme is switched back to normal
+          localStorage.removeItem('switchedTheme');
+        }
+      });
+    </script>
+  </body>
 </html>

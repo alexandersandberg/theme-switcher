@@ -23,9 +23,6 @@ If you want to get in touch, or check out my other work, you can find me online 
 
 - [Website](https://alexandersandberg.com) (alexandersandberg.com)
 - [Twitter](https://twitter.com/alexandberg) (@alexandberg)
-- [Medium](https://medium.com/@alexandersandberg) (@alexandersandberg)
-- [Instagram](https://www.instagram.com/sandbergalexander/) (@sandbergalexander)
-- [LinkedIn](https://www.linkedin.com/in/sandbergalex/) (@sandbergalexander)
 
 ## License
 
